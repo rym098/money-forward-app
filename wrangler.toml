@@ -1,0 +1,21 @@
+name = "money-forward-clone"
+main = "src/index.js"
+compatibility_date = "2025-04-03"
+
+[site]
+bucket = "./out"
+
+[build]
+command = "npm run build"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "money-forward-clone"
+database_id = "your-database-id-here"
+
+[env.production]
+workers_dev = false
+route = "your-domain.com/*"
+
+[env.development]
+workers_dev = true
